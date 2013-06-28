@@ -6,7 +6,7 @@ public class HardcoreTabs extends JavaPlugin {
 
 	public HardcoreTabs()
 	{
-		
+		// Hello world!
 	}
 	
 }
