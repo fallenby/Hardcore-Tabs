@@ -35,7 +35,12 @@ public class PlayerJoinListener implements Listener {
 		
 		String group = perms.getPrimaryGroup(player);
 		
-		if (!player.hasPermission("hardcore-tabs.enabled") && !player.isOp())
+		if (!player.hasPermission("hardcoretabs.enabled"))
+		{
+			return;
+		}
+		
+		if (plugin.groupConfig.getConfig().getString(group + ".color") == null)
 		{
 			return;
 		}
@@ -51,6 +56,7 @@ public class PlayerJoinListener implements Listener {
 			playerListMod += plugin.getConfig().getString("style." + style) == null ? "" : plugin.getConfig().getString("style." + style);
 		}
 		
+		player.setDisplayName(playerListMod + player.getName());
 		player.setPlayerListName(playerListMod + player.getName());
 		
 	}
