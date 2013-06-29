@@ -2,10 +2,14 @@ name: HardcoreTabs
 main: io.github.ye7i.hardcore_tabs.HardcoreTabs 
 version: 0.001a
 
+permissions:
+  hardcoretabs.reload:
+    description: Allows you to reload the Hardcore Tabs plugin config.
+    default: op
+
 commands:
-  test:
-    description: Test command
-    usage: /test
-  bcast:
-    description: Broadcast
-    usage: /broadcast <argument>
+  hctreload:
+    description: Reload the HardcoreTabs config file. This is useful when you don't want to reload the entire server.
+    usage: /hctreload
+    permission: hardcoretabs.reload
+    permission-message: You do not have the required permissions to use this command.
