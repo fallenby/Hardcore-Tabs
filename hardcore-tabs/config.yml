@@ -1,0 +1,36 @@
+# Message strings
+
+MSG_ENABLE: has been enabled
+MSG_DISABLE: has been disabled
+
+# Config file names
+
+GROUP_CONFIG_FILE_NAME: groupConfig.yml
+
+# Colors and styles
+
+color:
+  black: 0
+  darkblue: 1
+  darkgreen: 2
+  darkaqua: 3
+  darkred: 4
+  darkpurple: 5
+  gold: 6
+  gray: 7
+  darkgray: 8
+  blue: 9
+  green: a
+  aqua: b
+  red: c
+  lightpurple: d
+  yellow: e
+  white: f
+  magic: k
+  
+style:
+  bold: l
+  strikethrough: m
+  underline: n
+  italic: o
+  reset: r

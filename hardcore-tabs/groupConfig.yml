@@ -1,0 +1,27 @@
+# Group settings
+
+# The following colors and styles can be used:
+#
+# Colors:
+#	black, darkblue, darkgreen, darkaqua, darkred, darkpurple, gold, gray, darkgray, blue, green, aqua,
+#	red, lightpurple, yellow, white, magic
+#
+# Styles:
+# 	bold, strikethrough, underline, italic, reset
+
+# The group entries are to be formatted as follows, where a "_" is a space:
+#
+#<group name>:
+#__color: <color>
+#__font-styles:
+#____- <style name>
+#____- ... (add more like this if desired, multiples will be ignored)
+#
+# For example:
+#
+#Admin:
+#  color: red
+#  font-styles:
+#    - bold
+#    - strikethrough
+#    - underline
