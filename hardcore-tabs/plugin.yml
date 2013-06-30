@@ -5,6 +5,9 @@ version: 0.001a
 permissions:
   hardcoretabs.reload:
     description: Allows you to reload the Hardcore Tabs plugin config.
+    default: op
+  hardcoretabs.enabled:
+    description: Allows a group to take on Hardcore Tabs settings in the tab list.
     default: false
 
 commands:

@@ -33,15 +33,16 @@ public class PlayerJoinListener implements Listener {
 		
 		Player player = joinEvent.getPlayer();
 		
-		String group = perms.getPrimaryGroup(player);
-		
 		if (!player.hasPermission("hardcoretabs.enabled"))
 		{
 			return;
 		}
 		
+		String group = perms.getPrimaryGroup(player);
+		
 		if (plugin.groupConfig.getConfig().getString(group + ".color") == null)
 		{
+			plugin.getLogger().info(String.format("[%s] Attempted to load color configuration for group %s, but could not find them in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
 			return;
 		}
 		
