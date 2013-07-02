@@ -39,9 +39,16 @@ public class Colorizer {
 	
 	public void applyForPlayer(Player player)
 	{
+		player.setDisplayName(getPlayerListMod(player) + player.getName());
+		player.setPlayerListName(getPlayerListMod(player) + player.getName());
+	}
+	
+	public String getPlayerListMod(Player player)
+	{
+		
 		if (!player.hasPermission("hardcoretabs.enabled"))
 		{
-			return;
+			return "";
 		}
 		
 		String group = perms.getPrimaryGroup(player);
@@ -49,15 +56,9 @@ public class Colorizer {
 		if (plugin.groupConfig.getConfig().getString(group + ".color") == null)
 		{
 			plugin.getLogger().info(String.format("[%s] Attempted to load color configuration for group %s, but could not find them in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
-			return;
+			return "";
 		}
 		
-		player.setDisplayName(getPlayerListMod(player) + player.getName());
-		player.setPlayerListName(getPlayerListMod(player) + player.getName());
-	}
-	
-	public String getPlayerListMod(Player player)
-	{
 		String playerListMod = "";
 		
 		playerListMod += MOD_SEPERATOR;
@@ -69,6 +70,7 @@ public class Colorizer {
 			playerListMod += plugin.getConfig().getString("style." + style) == null ? "" : plugin.getConfig().getString("style." + style);
 		}
 		
+		plugin.getLogger().info(playerListMod);
 		return playerListMod;
 	}
 	
