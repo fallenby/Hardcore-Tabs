@@ -8,5 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/Dev/Bukkit/dev/hardcore-tabs/Vault.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/Bukkit/dev/hardcore-tabs/TagAPI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

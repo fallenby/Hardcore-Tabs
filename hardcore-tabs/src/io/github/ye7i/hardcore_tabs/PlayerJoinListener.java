@@ -20,8 +20,7 @@ public class PlayerJoinListener implements Listener {
 		
 		Player player = joinEvent.getPlayer();
 		
-		Colorizer color = new Colorizer(plugin);
-		color.applyForPlayer(player);
+		plugin.colorizer.applyForPlayer(player);
 		
 	}
 	

@@ -4,6 +4,7 @@ import net.milkbowl.vault.permission.Permission;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
+import org.kitteh.tag.TagAPI;
 
 public class Colorizer {
 
@@ -32,6 +33,7 @@ public class Colorizer {
 		for (Player player : players)
 		{
 			applyForPlayer(player);
+			TagAPI.refreshPlayer(player);
 		}
 	}
 	
@@ -50,19 +52,24 @@ public class Colorizer {
 			return;
 		}
 		
+		player.setDisplayName(getPlayerListMod(player) + player.getName());
+		player.setPlayerListName(getPlayerListMod(player) + player.getName());
+	}
+	
+	public String getPlayerListMod(Player player)
+	{
 		String playerListMod = "";
 		
 		playerListMod += MOD_SEPERATOR;
-		playerListMod += plugin.getConfig().getString("color." + plugin.groupConfig.getConfig().getString(group + ".color"));
+		playerListMod += plugin.getConfig().getString("color." + plugin.groupConfig.getConfig().getString(perms.getPrimaryGroup(player) + ".color"));
 		
-		for (String style : plugin.groupConfig.getConfig().getStringList(group + ".font-styles"))
+		for (String style : plugin.groupConfig.getConfig().getStringList(perms.getPrimaryGroup(player) + ".font-styles"))
 		{
 			playerListMod += MOD_SEPERATOR;
 			playerListMod += plugin.getConfig().getString("style." + style) == null ? "" : plugin.getConfig().getString("style." + style);
 		}
 		
-		player.setDisplayName(playerListMod + player.getName());
-		player.setPlayerListName(playerListMod + player.getName());
+		return playerListMod;
 	}
 	
 	private boolean setupPermissions() {
