@@ -1,6 +1,6 @@
 name: HardcoreTabs
 main: io.github.ye7i.hardcore_tabs.HardcoreTabs 
-version: 0.001a
+version: 1.0(Narwhal)
 
 permissions:
   hardcoretabs.reload:
