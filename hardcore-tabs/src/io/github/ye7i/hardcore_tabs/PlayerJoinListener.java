@@ -20,7 +20,8 @@ public class PlayerJoinListener implements Listener {
 		
 		Player player = joinEvent.getPlayer();
 		
-		plugin.colorizer.applyForPlayer(player);
+		plugin.colorizer.applyTabListForPlayer(player);
+		plugin.colorizer.applyTagForPlayer(player);
 		
 	}
 	

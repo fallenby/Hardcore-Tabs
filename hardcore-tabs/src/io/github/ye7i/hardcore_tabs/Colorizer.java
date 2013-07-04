@@ -26,21 +26,38 @@ public class Colorizer {
 		
 	}
 	
-	public void applyForAllPlayers()
+	public void applyTagForAllPlayers()
 	{
-		Player players[] = plugin.getServer().getOnlinePlayers();
-		
-		for (Player player : players)
+		for (Player player : plugin.getServer().getOnlinePlayers())
 		{
-			applyForPlayer(player);
-			TagAPI.refreshPlayer(player);
+			applyTagForNearbyPlayers(player);
 		}
 	}
 	
-	public void applyForPlayer(Player player)
+	public void applyTabListForAllPlayers()
 	{
-		player.setDisplayName(getPlayerListMod(player) + player.getName());
+		for (Player player : plugin.getServer().getOnlinePlayers())
+		{
+			applyTabListForPlayer(player);
+		}
+	}
+	
+	public void applyTabListForPlayer(Player player)
+	{
 		player.setPlayerListName(getPlayerListMod(player) + player.getName());
+	}
+	
+	public void applyTagForPlayer(Player player)
+	{
+		TagAPI.refreshPlayer(player);
+	}
+	
+	public void applyTagForNearbyPlayers(Player player)
+	{
+		for (Player nearbyPlayer : HctUtils.getNearbyPlayers(player, plugin.getConfig().getInt("PLAYER_SIGHT_DISTANCE")))
+		{
+			applyTagForPlayer(nearbyPlayer);
+		}
 	}
 	
 	public String getPlayerListMod(Player player)

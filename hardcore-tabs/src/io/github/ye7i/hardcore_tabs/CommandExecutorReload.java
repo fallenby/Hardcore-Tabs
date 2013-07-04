@@ -23,11 +23,12 @@ public class CommandExecutorReload implements CommandExecutor {
 		
 		plugin.groupConfig.reloadConfig();
 
-		plugin.colorizer.applyForAllPlayers();
+		plugin.colorizer.applyTabListForAllPlayers();
+		plugin.colorizer.applyTagForAllPlayers();
 		
 		sender.sendMessage("Hardcore Tabs configuration has been reloaded.");
 		
 		return true;
-	}
-
+	} 
+	
 }

@@ -21,7 +21,7 @@ public final class HardcoreTabs extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
 		getServer().getPluginManager().registerEvents(new NameTagReceiveListener(this), this);
 		
-		getLogger().info(String.format("$0 $1 $2", getDescription().getName(), getDescription().getVersion(), getConfig().getString("MSG_ENABLE")));
+		getLogger().info(String.format("%s %s %s", getDescription().getName(), getDescription().getVersion(), getConfig().getString("MSG_ENABLE")));
 	}
 	
 	@Override
