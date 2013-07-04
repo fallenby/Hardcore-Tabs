@@ -30,6 +30,14 @@ public class Colorizer {
 	{
 		for (Player player : plugin.getServer().getOnlinePlayers())
 		{
+			TagAPI.refreshPlayer(player);
+		}
+	}
+	
+	public void applyTagForAllNearbyPlayers()
+	{
+		for (Player player : plugin.getServer().getOnlinePlayers())
+		{
 			applyTagForNearbyPlayers(player);
 		}
 	}
