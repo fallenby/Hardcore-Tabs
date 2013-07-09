@@ -3,11 +3,21 @@
 # The following colors and styles can be used:
 #
 # Colors:
-#	black, darkblue, darkgreen, darkaqua, darkred, darkpurple, gold, gray, darkgray, blue, green, aqua,
-#	red, lightpurple, yellow, white, magic
+#	  black, darkblue, darkgreen, darkaqua, darkred, darkpurple, gold, gray, darkgray, blue, green, aqua,
+#	  red, lightpurple, yellow, white, magic
 #
 # Styles:
 # 	bold, strikethrough, underline, italic, reset
+
+# Apply the following permissions on a group for the respective effects:
+# Note that these permissions are to be set using a seperate group-management plug-in such as GroupManager.
+#
+# hardcoretabs.reload:
+#   Allows the group to use the reload command for the plugin.
+# hardcoretabs.tablist
+#   Allows the group to take on Tab List settings from the plugin.
+# hardcoretabs.nametags
+#   Allows the group to take on Player Name Tag settings from the plugin.
 
 # The group entries are to be formatted as follows, where a "_" is a space:
 #

@@ -1,13 +1,16 @@
 name: HardcoreTabs
 main: io.github.ye7i.hardcore_tabs.HardcoreTabs 
-version: 1.001(Narwhal)
+version: 1.01(Narwhal)
 
 permissions:
   hardcoretabs.reload:
     description: Allows you to reload the Hardcore Tabs plugin config.
     default: op
-  hardcoretabs.enabled:
-    description: Allows a group to take on Hardcore Tabs settings in the tab list.
+  hardcoretabs.tablist:
+    description: Allows a group to take on Hardcore Tabs settings for the tab list.
+    default: false
+  hardcoretabs.nametags:
+    description: Allows a group to take on Hardcore Tabs settings for player name tags.
     default: false
 
 commands:

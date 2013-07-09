@@ -9,6 +9,9 @@ GROUP_CONFIG_FILE_NAME: groupConfig.yml
 
 # Plugin variables
 
+PERM_TAB_LIST: hardcoretabs.tablist
+PERM_NAME_TAG: hardcoretabs.nametags
+
 # Sight distance of a player in blocks
 PLAYER_SIGHT_DISTANCE: 160
 

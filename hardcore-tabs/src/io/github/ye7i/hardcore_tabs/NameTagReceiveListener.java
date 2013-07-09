@@ -16,7 +16,12 @@ public class NameTagReceiveListener implements Listener {
 	@EventHandler
 	public void onNameTag(PlayerReceiveNameTagEvent event) {
 		
-		event.setTag(plugin.colorizer.getPlayerListMod(event.getNamedPlayer()) + event.getNamedPlayer().getName());
+		if (plugin.perms.has(event.getNamedPlayer(), plugin.getConfig().getString("PERM_NAME_TAG")))
+		{
+			event.setTag(HctUtils.getPlayerListMod(event.getNamedPlayer(), plugin) + event.getNamedPlayer().getName());
+		} else {
+			event.setTag(event.getNamedPlayer().getName());
+		}
 		
 	}
 	
