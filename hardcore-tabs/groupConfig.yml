@@ -12,12 +12,14 @@
 # Apply the following permissions on a group for the respective effects:
 # Note that these permissions are to be set using a seperate group-management plug-in such as GroupManager.
 #
+# hardcoretabs.all:
+#   Allows the group to take on both Tab List and Name Tag settings from the plug-in.
 # hardcoretabs.reload:
-#   Allows the group to use the reload command for the plugin.
+#   Allows the group to use the reload command for the plug-in.
 # hardcoretabs.tablist
-#   Allows the group to take on Tab List settings from the plugin.
+#   Allows the group to take on Tab List settings from the plug-in.
 # hardcoretabs.nametags
-#   Allows the group to take on Player Name Tag settings from the plugin.
+#   Allows the group to take on Player Name Tag settings from the plug-in.
 
 # The group entries are to be formatted as follows, where a "_" is a space:
 #
