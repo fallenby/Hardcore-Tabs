@@ -5,8 +5,7 @@ import net.milkbowl.vault.permission.Permission;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/* 
- * Welcome any nosy hackers!
+/* Welcome any nosy hackers!
  * 
  * If you're reading this you've either managed to acquire the source code legitimately
  * or you've gone and decompiled my source files as well as somehow managed to acquire the plug-in.
@@ -59,18 +58,19 @@ public final class HardcoreTabs extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerChangedWorldListener(this), this);
 		
 		if (!setupPermissions()) {
-			 this.getServer().getPluginManager().disablePlugin(this);
-	         
-			 return;
+			getLogger().info("[%s] Could not be enabled because permissions could not be set up.");
+			
+			this.getServer().getPluginManager().disablePlugin(this);
+			return;
 	    }
 		
-		getLogger().info(String.format("%s %s %s", getDescription().getName(), getDescription().getVersion(), getConfig().getString("MSG_ENABLE")));
+		getLogger().info(String.format("[%s] %s %s", getDescription().getName(), getDescription().getVersion(), getConfig().getString("MSG_ENABLE")));
 	}
 	
 	@Override
 	public void onDisable()
 	{
-		getLogger().info(String.format("%s %s %s", getDescription().getName(), getDescription().getVersion(), getConfig().getString("MSG_DISABLE")));
+		getLogger().info(String.format("[%s] %s %s", getDescription().getName(), getDescription().getVersion(), getConfig().getString("MSG_DISABLE")));
 	}
 	
 	private boolean setupPermissions() {

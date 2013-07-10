@@ -3,6 +3,11 @@ main: io.github.ye7i.hardcore_tabs.HardcoreTabs
 version: 1.01(Narwhal)
 
 permissions:
+  hardcoretabs.all:
+    description: Allows access to all Hardcore Tabs features excluding commands.
+    children:
+      hardcoretabs.tablist: true
+      hardcoretabs.nametags: true
   hardcoretabs.reload:
     description: Allows you to reload the Hardcore Tabs plugin config.
     default: op

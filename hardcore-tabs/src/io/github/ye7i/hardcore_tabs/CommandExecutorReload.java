@@ -26,7 +26,7 @@ public class CommandExecutorReload implements CommandExecutor {
 		plugin.tabList.applyTabListForAllPlayers();
 		plugin.nameTags.applyTagForAllNearbyPlayers();
 		
-		sender.sendMessage("Hardcore Tabs configuration has been reloaded.");
+		sender.sendMessage(String.format("[%s] Configuration has been reloaded.", plugin.getDescription().getName()));
 		
 		return true;
 	} 
