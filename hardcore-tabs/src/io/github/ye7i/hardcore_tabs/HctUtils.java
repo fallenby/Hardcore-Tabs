@@ -33,7 +33,7 @@ public class HctUtils {
 		
 		if (plugin.groupConfig.getConfig().getString(group + ".color") == null)
 		{
-			plugin.getLogger().info(String.format("[%s] Attempted to load color configuration for group %s, but could not find them in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
+			//plugin.getLogger().info(String.format("[%s] Attempted to load color configuration for group %s, but could not find them in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
 			return "";
 		}
 		
@@ -41,7 +41,7 @@ public class HctUtils {
 		
 		if (plugin.getConfig().getString("color." + plugin.groupConfig.getConfig().getString(plugin.perms.getPrimaryGroup(player) + ".color")) == null)
 		{
-			plugin.getLogger().info(String.format("[%s] Attempted to load color configuration for group %s, but found invalid color name in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
+			//plugin.getLogger().info(String.format("[%s] Attempted to load color configuration for group %s, but found invalid color name in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
 		} else {
 			playerListMod += MOD_SEPERATOR;
 			playerListMod += plugin.getConfig().getString("color." + plugin.groupConfig.getConfig().getString(plugin.perms.getPrimaryGroup(player) + ".color"));
@@ -51,7 +51,7 @@ public class HctUtils {
 		{
 			if (plugin.getConfig().getString("style." + style) == null)
 			{
-				plugin.getLogger().info(String.format("[%s] Attempted to load font style configuration for group %s, but found invalid font style name in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
+				//plugin.getLogger().info(String.format("[%s] Attempted to load font style configuration for group %s, but found invalid font style name in %s.", plugin.getDescription().getName(), group, plugin.getConfig().getString("GROUP_CONFIG_FILE_NAME")));
 			} else {
 				playerListMod += MOD_SEPERATOR;
 				playerListMod += plugin.getConfig().getString("style." + style);
